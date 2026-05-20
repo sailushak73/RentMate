@@ -8,10 +8,9 @@ dotenv.config();
 const app = express();
 
 // Middleware
-
 app.use(cors({
   origin: [
-    "https://rentmate-api-8q5j.onrender.com",
+    "http://localhost:5173",
     "https://rent-mate-mern.vercel.app"
   ],
   credentials: true
