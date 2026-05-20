@@ -17,7 +17,7 @@ const PropertyDetails = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const res = await fetch(`http://{import.meta.env.VITE_API_URL}/api/properties/${id}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/${id}`);
         const data = await res.json();
         if (res.ok) {
           setProperty(data);
@@ -40,7 +40,7 @@ const PropertyDetails = () => {
 
     try {
       const storedUser = JSON.parse(localStorage.getItem('user'));
-      const res = await fetch('http://{import.meta.env.VITE_API_URL}/api/visits', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/visits`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

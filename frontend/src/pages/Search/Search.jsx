@@ -33,7 +33,7 @@ const Search = () => {
         if (value) queryParams.append(key, value);
       });
 
-      const res = await fetch(`http://{import.meta.env.VITE_API_URL}/api/properties?${queryParams.toString()}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties?${queryParams.toString()}`);
       const data = await res.json();
       setProperties(data);
     } catch (error) {
@@ -52,7 +52,7 @@ const Search = () => {
     const fetchAreas = async () => {
       try {
         const query = filters.city ? `?city=${encodeURIComponent(filters.city)}` : '';
-        const res = await fetch(`http://{import.meta.env.VITE_API_URL}/api/properties/areas${query}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/areas${query}`);
         const data = await res.json();
         setAreaSuggestions(data);
       } catch (error) {
