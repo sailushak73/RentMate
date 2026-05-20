@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",
+    "https://rentmate-api-8q5j.onrender.com",
     "https://rent-mate-mern.vercel.app"
   ],
   credentials: true

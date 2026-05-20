@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   const fetchUnverified = async () => {
     try {
       const storedUser = JSON.parse(localStorage.getItem('user'));
-      const res = await fetch('http://localhost:5000/api/properties/admin/unverified', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/admin/unverified`, {
         headers: { 'Authorization': `Bearer ${storedUser.token}` }
       });
       const data = await res.json();
@@ -28,7 +28,7 @@ const AdminDashboard = () => {
   const handleVerify = async (id) => {
     try {
       const storedUser = JSON.parse(localStorage.getItem('user'));
-      const res = await fetch(`http://localhost:5000/api/properties/admin/verify/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/admin/verify/${id}`, {
         method: 'PUT',
         headers: { 'Authorization': `Bearer ${storedUser.token}` }
       });
