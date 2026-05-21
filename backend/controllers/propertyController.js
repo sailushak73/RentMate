@@ -379,10 +379,10 @@ exports.uploadImages = async (req, res) => {
 
     // req.files is an array. If from multer-storage-cloudinary, it has file.path
     // If from local diskStorage, we construct the URL to the static folder
-    const urls = req.files.map(file => {
-      if (file.path && file.path.startsWith('http')) return file.path; // Cloudinary URL
-      return `http://https://rentmate-api-8q5j.onrender.com/uploads/${file.filename}`; // Local disk fallback
-    });
+    const urls = req.files?.map(file => {
+  if (file.path && file.path.startsWith('http')) return file.path;
+  return `https://rentmate-api-8q5j.onrender.com/uploads/${file.filename}`;
+  }) || [];
     
     res.json({ message: 'Images uploaded successfully', urls });
   } catch (error) {
