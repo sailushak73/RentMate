@@ -9,10 +9,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: [
-    "https://rentmate-kappa.vercel.app"
-  ],
-  credentials: true
+  origin: "*"
 }));
 app.use(express.json());
 
