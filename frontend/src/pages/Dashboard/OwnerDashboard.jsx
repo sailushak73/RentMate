@@ -19,7 +19,7 @@ const OwnerDashboard = () => {
   const fetchProperties = async () => {
     try {
       const storedUser = JSON.parse(localStorage.getItem('user'));
-      const res = await fetch('http://{import.meta.env.VITE_API_URL}/api/properties/owner/my-properties', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/owner/my-properties`, {
         headers: { 'Authorization': `Bearer ${storedUser.token}` }
       });
       const data = await res.json();
@@ -32,7 +32,7 @@ const OwnerDashboard = () => {
   const fetchVisits = async () => {
     try {
       const storedUser = JSON.parse(localStorage.getItem('user'));
-      const res = await fetch('http://{import.meta.env.VITE_API_URL}/api/visits', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/visits`, {
         headers: { 'Authorization': `Bearer ${storedUser.token}` }
       });
       const data = await res.json();
@@ -80,7 +80,7 @@ const OwnerDashboard = () => {
         const imgFormData = new FormData();
         selectedImages.forEach(file => imgFormData.append('images', file));
 
-        const uploadRes = await fetch('http://{import.meta.env.VITE_API_URL}/api/properties/upload', {
+        const uploadRes = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/upload`, {
           method: 'POST',
           headers: { 'Authorization': `Bearer ${storedUser.token}` },
           body: imgFormData
@@ -97,7 +97,7 @@ const OwnerDashboard = () => {
 
       const postData = { ...formData, images: uploadedUrls };
 
-      const res = await fetch('http://{import.meta.env.VITE_API_URL}/api/properties', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ const OwnerDashboard = () => {
   const handleVisitStatus = async (visitId, status) => {
     try {
       const storedUser = JSON.parse(localStorage.getItem('user'));
-      const res = await fetch(`http://{import.meta.env.VITE_API_URL}/api/visits/${visitId}/status`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/visits/${visitId}/status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ const OwnerDashboard = () => {
   const handleDelete = async () => {
     try {
       const storedUser = JSON.parse(localStorage.getItem('user'));
-      const res = await fetch(`http://{import.meta.env.VITE_API_URL}/api/properties/${deleteModal.propertyId}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/${deleteModal.propertyId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${storedUser.token}` }
       });
@@ -169,7 +169,7 @@ const OwnerDashboard = () => {
       const storedUser = JSON.parse(localStorage.getItem('user'));
       const newStatus = statusModal.currentStatus === 'available' ? 'rented' : 'available';
 
-      const res = await fetch(`http://{import.meta.env.VITE_API_URL}/api/properties/${statusModal.propertyId}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/properties/${statusModal.propertyId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
