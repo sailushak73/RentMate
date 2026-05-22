@@ -22,10 +22,12 @@ const connectDB = async () => {
     await mongoose.connect(MONGO_URI);
     console.log('Connected to MongoDB');
   } catch (error) {
-    console.warn('\n--- MongoDB Connection Warning ---');
-    console.warn('Could not connect to MongoDB. Using in-memory fallback for Auth APIs.');
-    console.warn('To use a real database, ensure MongoDB is running or add MONGO_URI to .env');
-    console.warn('----------------------------------\n');
+    //console.warn('\n--- MongoDB Connection Warning ---');
+    //console.warn('Could not connect to MongoDB. Using in-memory fallback for Auth APIs.');
+    //console.warn('To use a real database, ensure MongoDB is running or add MONGO_URI to .env');
+    //console.warn('----------------------------------\n');
+
+    console.log(error);
   }
 
   // Start server regardless of DB connection so API calls don't get ECONNREFUSED
