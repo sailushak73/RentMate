@@ -234,31 +234,31 @@ Users can:
 
 ## Landing Page
 
-![Landing Page](home-page.png)
+![Landing Page](screenshots/home-page.png)
 
 ---
 
 ## Search Properties
 
-![Search Properties](search-properties.png)
+![Search Properties](screenshots/search-properties.png)
 
 ---
 
 ## Property Details
 
-![Property Details](property-details.png)
+![Property Details](screenshots/property-details.png)
 
 ---
 
 ## Owner Dashboard
 
-![Owner Dashboard](owner-dashboard.png)
+![Owner Dashboard](screenshots/owner-dashboard.png)
 
 ---
 
 ## Post Property
 
-![Post Property](post-property.png)
+![Post Property](screenshots/post-property.png)
 
 ---
 
