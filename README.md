@@ -234,43 +234,31 @@ Users can:
 
 ## Landing Page
 
-![Landing Page](screenshots/landing-page.png)
-
----
-
-## Register Page
-
-![Register Page](screenshots/register-page.png)
-
----
-
-## Login Page
-
-![Login Page](screenshots/login-page.png)
+![Landing Page](home-page.png)
 
 ---
 
 ## Search Properties
 
-![Search Properties](screenshots/search-page.png)
+![Search Properties](search-properties.png)
 
 ---
 
 ## Property Details
 
-![Property Details](screenshots/property-details.png)
+![Property Details](property-details.png)
 
 ---
 
 ## Owner Dashboard
 
-![Owner Dashboard](screenshots/owner-dashboard.png)
+![Owner Dashboard](owner-dashboard.png)
 
 ---
 
 ## Post Property
 
-![Post Property](screenshots/post-property.png)
+![Post Property](post-property.png)
 
 ---
 
